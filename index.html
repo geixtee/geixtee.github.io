@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(self)">
-    <meta name="description" content="Astronaut Star Galaxy Projector - Dense starfields and aurora colors projected onto your ceiling. Battery powered. Remote included. $24.99.">
-    <title>LumaWorld — Astronaut Star Galaxy Projector</title>
+    <meta name="description" content="Astronaut Galaxy Star Projector — nebula night light for bedroom, ceiling and room decor. USB powered. Remote included. $24.99.">
+    <title>LumaWorld — Astronaut Galaxy Star Projector</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
             --pi: #f472b6;
             --tx: #f1f0ff;
             --tm: #a8a7c7;
-            --td2: #6b6a8a;
+            --td2: #9695b8;
             --bd: rgba(139, 92, 246, 0.07);
             --bh: rgba(139, 92, 246, 0.22);
             --rm: 16px;
@@ -128,7 +129,7 @@
         .bs { display: inline-flex; align-items: center; gap: .5rem; padding: .9rem 2.2rem; background: rgba(255, 255, 255, .03); color: var(--tx); font-size: 1.05rem; font-weight: 500; border: 1px solid var(--bd); border-radius: 100px; cursor: pointer; transition: all var(--tb); text-decoration: none; }
         .bs:hover { background: rgba(255, 255, 255, .06); border-color: var(--bh); transform: translateY(-2px); }
         .hv { position: relative; display: flex; align-items: center; justify-content: center; }
-        .hv::before { content: ''; position: absolute; width: 140%; height: 140%; background: radial-gradient(ellipse, rgba(139, 92, 246, .1) 0%, rgba(96, 165, 250, .05) 40%, transparent 70%); border-radius: 50%; filter: blur(60px); z-index: 0; }
+        .hv::before { content: ''; position: absolute; width: 140%; height: 140%; background: radial-gradient(ellipse, rgba(139, 92, 246, .1) 0%, rgba(96, 165, 250, .05) 40%, transparent 70%), url('images/hero-ambient-bg.png'); background-size: cover; background-position: center; border-radius: 50%; filter: blur(60px); opacity: .35; z-index: 0; }
         .hw { position: relative; width: 100%; max-width: 480px; border-radius: var(--rx); overflow: hidden; z-index: 1; border: 1px solid var(--bd); box-shadow: 0 0 60px rgba(139, 92, 246, .12), 0 24px 64px rgba(0, 0, 0, .4); aspect-ratio: 1/1; background: linear-gradient(135deg, rgba(139, 92, 246, .04), rgba(96, 165, 250, .02)); transition: box-shadow var(--tb), border-color var(--tb), transform var(--tb); }
         .hw:hover { border-color: var(--bh); box-shadow: 0 0 80px rgba(139, 92, 246, .22), 0 24px 64px rgba(0, 0, 0, .5); transform: scale(1.01); }
         .hw img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
@@ -165,6 +166,11 @@
         .hs-d { font-size: .9rem; color: var(--tm); line-height: 1.65; }
 
         .gg { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+        .gg2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0; }
+        .gc2 { position: relative; text-align: center; padding: 1rem; }
+        .gc2 img { width: 100%; max-width: 320px; mix-blend-mode: screen; -webkit-mask-image: radial-gradient(ellipse at center, black 50%, transparent 82%); mask-image: radial-gradient(ellipse at center, black 50%, transparent 82%); transition: transform var(--tb); }
+        .gc2:hover img { transform: scale(1.03); }
+        .gc2 .gl2 { display: block; margin-top: -1.5rem; position: relative; z-index: 2; font-size: .95rem; font-weight: 600; color: var(--tx); text-shadow: 0 2px 12px rgba(1,1,6,.9); }
         .gc { position: relative; border-radius: var(--rl); overflow: hidden; aspect-ratio: 4/3; background: #08081a; border: 1px solid var(--bd); transition: all var(--tb); }
         .gc::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(1, 1, 6, .88) 100%); opacity: .65; transition: opacity var(--tb); }
         .gc:hover { transform: scale(1.02); border-color: var(--bh); box-shadow: 0 16px 48px rgba(0, 0, 0, .35), 0 0 30px rgba(139, 92, 246, .08); }
@@ -230,9 +236,8 @@
             .sd { font-size: .95rem; }
             .fg, .hs, .kl { gap: 1rem; }
             .fc, .hn2 { padding: 1.5rem 1.25rem; }
-            .ha { gap: .75rem; }
+            .ha { gap: .75rem; flex-direction: column; }
             .bp, .bs { padding: .8rem 1.6rem; font-size: .95rem; width: 100%; justify-content: center; }
-            .ha { flex-direction: column; }
             .ti { gap: 1.25rem 1.5rem; }
             .cs { padding: 3rem 1.25rem; }
             .a11y-toggle { width: 42px; height: 42px; bottom: 14px; left: 14px; }
@@ -243,16 +248,14 @@
             .ht { font-size: 1.9rem; }
             .pn { font-size: 1.85rem; }
         }
+        @media (max-width: 600px) {
+            .ambient-blob { filter: blur(60px); }
+            .nav, .tb, .sc, .fc, .hn2, .ki, .fq { backdrop-filter: none; -webkit-backdrop-filter: none; }
+        }
 
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
             * { scroll-behavior: auto !important; }
-        }
-
-        /* Lighten expensive effects on small/low-power screens */
-        @media (max-width: 600px) {
-            .ambient-blob { filter: blur(60px); }
-            .nav, .tb, .sc, .fc, .hn2, .ki, .fq { backdrop-filter: none; -webkit-backdrop-filter: none; }
         }
     </style>
 </head>
@@ -303,7 +306,7 @@
         <div class="hi">
             <div class="hc">
                 <h1 class="ht" id="hero-title">Your Ceiling Becomes the Galaxy</h1>
-                <p class="hd">Dense starfields and aurora colors projected live onto your ceiling. Batteries included. No cords. Just look up.</p>
+                <p class="hd">Drifting stars and aurora colors projected live onto your ceiling and walls. Plug in and look up — no batteries, no setup.</p>
                 <div class="urg" aria-label="Limited stock available"><span class="urd" aria-hidden="true"></span>Limited stock available</div>
                 <div class="pr"><span class="pn">$24.99</span><span class="pw" aria-label="Original price $34.99">$34.99</span><span class="ps">Save 29%</span></div>
                 <div class="ha">
@@ -312,7 +315,7 @@
                 </div>
             </div>
             <div class="hv">
-                <div class="hw"><img src="img-1.jpg" alt="Astronaut Star Galaxy Projector" id="heroImg"></div>
+                <div class="hw"><img src="images/hero-product.png" alt="Astronaut Galaxy Star Projector with remote control and color effects" id="heroImg"></div>
             </div>
         </div>
     </section>
@@ -320,57 +323,61 @@
     <div class="tb" role="region" aria-label="Trust badges"><div class="ti">
         <div class="tbi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-4"/><path d="M8 11l4 4 6-6"/></svg>Free Shipping (7-10 days)</div>
         <div class="tbi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Remote Included</div>
-        <div class="tbi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M22 10v4"/></svg>Batteries Included</div>
+        <div class="tbi"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M22 10v4"/></svg>USB Powered</div>
     </div></div>
 
-    <section class="sec" id="how-it-works" aria-labelledby="hiw-title"><div class="si"><div class="sh"><span class="sl">How It Works</span><h2 class="st" id="hiw-title">No Cords. No Setup. Just Glow.</h2><p class="sd">Three simple steps to transform any room.</p></div><div class="hs">
-        <div class="hn2"><div class="hs-n">1</div><h3 class="hs-t">Insert the included batteries</h3><p class="hs-d">Batteries are already in the box. No USB cable needed — place it anywhere.</p></div>
+    <section class="sec" id="how-it-works" aria-labelledby="hiw-title"><div class="si"><div class="sh"><span class="sl">How It Works</span><h2 class="st" id="hiw-title">Plug In. Point It. Just Glow.</h2><p class="sd">Three simple steps to transform any room.</p></div><div class="hs">
+        <div class="hn2"><div class="hs-n">1</div><h3 class="hs-t">Plug in with the included USB cable</h3><p class="hs-d">No batteries needed. Connect to any USB power source and it's ready to go.</p></div>
         <div class="hn2"><div class="hs-n">2</div><h3 class="hs-t">Aim the astronaut's head</h3><p class="hs-d">The head rotates 360 degrees. Point it at your ceiling, angle it your way.</p></div>
-        <div class="hn2"><div class="hs-n">3</div><h3 class="hs-t">Use the remote to choose your mode</h3><p class="hs-d">Switch between colors, brightness, and light patterns from your bed.</p></div>
+        <div class="hn2"><div class="hs-n">3</div><h3 class="hs-t">Use the remote to choose your mode</h3><p class="hs-d">Switch between 8 nebula effects, adjust brightness, or set the 45/90-minute auto-off timer from your bed.</p></div>
     </div></div></section>
 
     <section class="sec" id="features" aria-labelledby="features-title"><div class="si"><div class="sh"><span class="sl">Features</span><h2 class="st" id="features-title">What Makes It Different</h2><p class="sd">One projector. Multiple ways to use it.</p></div><div class="fg">
         <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div><h3 class="ft">Laser Star Dots</h3><p class="ftx">Dense, pinpoint laser stars scattered across your ceiling. Sharp, realistic star points — not smudged blobs.</p></div>
-        <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12l5-5"/><path d="M2 12l5 5"/><path d="M22 12l-5-5"/><path d="M22 12l-5 5"/></svg></div><h3 class="ft">Aurora Nebula Colors</h3><p class="ftx">Flowing blue, purple, green, and pink nebula colors. Multiple modes via remote.</p></div>
-        <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0"/><path d="M21 12a9 9 0 0 0-9-9"/><circle cx="12" cy="12" r="4"/></svg></div><h3 class="ft">360-Degree Adjustable Head</h3><p class="ftx">The head rotates a full 360 degrees. Point it wherever you want the projection.</p></div>
-                <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><h3 class="ft">Multiple Modes via Remote</h3><p class="ftx">Change colors, brightness, and pattern speed from across the room. No app to download.</p></div>
-                <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M22 10v4"/></svg></div><h3 class="ft">Battery Powered</h3><p class="ftx">Runs on batteries (included). No cords, no outlet needed. Place it anywhere.</p></div>
+        <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 12l5-5"/><path d="M2 12l5 5"/><path d="M22 12l-5-5"/><path d="M22 12l-5 5"/></svg></div><h3 class="ft">8 Nebula Light Effects</h3><p class="ftx">RGB mixed color nebula with twinkling stars. Cycle through 8 effects via remote.</p></div>
+        <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0"/><path d="M21 12a9 9 0 0 0-9-9"/><circle cx="12" cy="12" r="4"/></svg></div><h3 class="ft">Auto-Off Timer</h3><p class="ftx">Set it to shut off automatically after 45 or 90 minutes — no light left on all night.</p></div>
+                <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div><h3 class="ft">Remote or Press-Key Control</h3><p class="ftx">Change effects, brightness, and timer from across the room, or use the back buttons directly.</p></div>
+                <div class="fc"><div class="fi" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M22 10v4"/></svg></div><h3 class="ft">USB Powered, No Batteries</h3><p class="ftx">Runs on 5V/1A USB power (cable included). No batteries required or included.</p></div>
     </div></div></section>
 
     <section class="sec" aria-labelledby="kit-title"><div class="si"><div class="sh"><span class="sl">What You Get</span><h2 class="st" id="kit-title">Everything in the Box</h2></div><div class="kl">
-        <div class="ki"><span class="kc" aria-hidden="true">✓</span>Astronaut Projector Unit x 1</div>
+        <div class="ki"><span class="kc" aria-hidden="true">✓</span>Astronaut Lamp x 1</div>
         <div class="ki"><span class="kc" aria-hidden="true">✓</span>Remote Control x 1</div>
-        <div class="ki"><span class="kc" aria-hidden="true">✓</span>Batteries (Included)</div>
+        <div class="ki"><span class="kc" aria-hidden="true">✓</span>USB Cable x 1</div>
         <div class="ki"><span class="kc" aria-hidden="true">✓</span>User Manual x 1</div>
     </div></div></section>
 
-    <section class="sec" id="gallery" aria-labelledby="gallery-title"><div class="si"><div class="sh"><span class="sl">Real Room Photos</span><h2 class="st" id="gallery-title">See It In Action</h2><p class="sd">Actual ceiling projections in real rooms.</p></div><div class="gg">
-        <div class="gc"><img src="img-3a.jpg" alt="Blue starfield ceiling projection with laser dots"><span class="gl">Blue Starfield — Living Room</span></div>
-        <div class="gc"><img src="img-3b.png" alt="Green teal aurora waves ceiling projection"><span class="gl">Aurora Waves — Studio</span></div>
-        <div class="gc"><img src="img 4 (shows it can be used in a car or desk in room).jpg" alt="Compact astronaut projector casting purple and pink starfield in a car"><span class="gl">Compact Size — Use Anywhere</span></div>
-        <div class="gc"><img src="img-5.jpg" alt="Full bedroom with galaxy projection covering ceiling and walls"><span class="gl">Full Room Coverage — Bedroom</span></div>
+    <section class="sec" id="gallery" aria-labelledby="gallery-title"><div class="si"><div class="sh"><span class="sl">Product Gallery</span><h2 class="st" id="gallery-title">See It In Action</h2><p class="sd">Manufacturer photos showing the projector in different room settings.</p></div>
+        <div class="gg2">
+            <div class="gc2"><img src="images/room-gameroom.png" alt="Astronaut projector lighting up a gaming setup"><span class="gl2">Game Room</span></div>
+            <div class="gc2"><img src="images/room-hometheater.png" alt="Astronaut projector nebula effect in a home theater"><span class="gl2">Home Theater</span></div>
+            <div class="gc2"><img src="images/room-carceiling.png" alt="Astronaut projector light effect on a car ceiling"><span class="gl2">Car Ceiling</span></div>
+        </div>
+    </div></section>
     </div></div></section>
 
     <section class="sec" id="specs" aria-labelledby="specs-title"><div class="si"><div class="sh"><span class="sl">The Details</span><h2 class="st" id="specs-title">Specifications</h2></div><div class="sc"><div class="sl2">
-        <div class="sr"><span class="sk">Product</span><span class="sv">Star Projector Galaxy Night Light</span></div>
-        <div class="sr"><span class="sk">Type</span><span class="sv">Atmosphere Light</span></div>
-        <div class="sr"><span class="sk">Power</span><span class="sv">Battery (3V, included)</span></div>
-        <div class="sr"><span class="sk">Remote Included</span><span class="sv">Yes</span></div>
-        <div class="sr"><span class="sk">Bulbs Included</span><span class="sv">Yes</span></div>
-        <div class="sr"><span class="sk">Bluetooth/Speaker</span><span class="sv">None</span></div>
-        <div class="sr"><span class="sk">US Shipping</span><span class="sv">Approx. 7-10 days</span></div>
+        <div class="sr"><span class="sk">Product</span><span class="sv">Astronaut Galaxy Star Projector</span></div>
+        <div class="sr"><span class="sk">Model</span><span class="sv">H-B62</span></div>
+        <div class="sr"><span class="sk">Light Effects</span><span class="sv">8 nebula effects, RGB mixed color</span></div>
+        <div class="sr"><span class="sk">Power</span><span class="sv">USB, DC 5V/1A (cable included)</span></div>
+        <div class="sr"><span class="sk">Batteries</span><span class="sv">Not required, not included</span></div>
+        <div class="sr"><span class="sk">Control</span><span class="sv">Remote or press-key, 45/90 min timer</span></div>
+        <div class="sr"><span class="sk">Material</span><span class="sv">ABS</span></div>
+        <div class="sr"><span class="sk">Product Size</span><span class="sv">85 × 76 × 125 mm</span></div>
+        <div class="sr"><span class="sk">US Shipping</span><span class="sv">Ships from a US warehouse</span></div>
     </div></div></section>
 
     <section class="sec" id="faq" aria-labelledby="faq-title"><div class="si"><div class="sh"><span class="sl">Questions</span><h2 class="st" id="faq-title">FAQ</h2></div><div class="faq">
         <div class="fq"><button class="fq-q" aria-expanded="false" aria-controls="faq-a1" onclick="toggleFaq(this)">How long does shipping take?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="fq-a" id="faq-a1"><div class="faq-inner"><div class="faq-body">US delivery is approximately 7-10 business days from when you order.</div></div></div></div>
-        <div class="fq"><button class="fq-q" aria-expanded="false" aria-controls="faq-a2" onclick="toggleFaq(this)">What is in the box?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="fq-a" id="faq-a2"><div class="faq-inner"><div class="faq-body">The projector unit, remote control, batteries (included), and user manual.</div></div></div></div>
-        <div class="fq"><button class="fq-q" aria-expanded="false" aria-controls="faq-a3" onclick="toggleFaq(this)">Does it need USB or a power outlet?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="fq-a" id="faq-a3"><div class="faq-inner"><div class="faq-body">No. It runs on batteries (included). No cords, no USB, no outlet needed. Place it anywhere.</div></div></div></div>
+        <div class="fq"><button class="fq-q" aria-expanded="false" aria-controls="faq-a2" onclick="toggleFaq(this)">What is in the box?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="fq-a" id="faq-a2"><div class="faq-inner"><div class="faq-body">The astronaut lamp, remote control, USB cable, and user manual. No batteries needed.</div></div></div></div>
+        <div class="fq"><button class="fq-q" aria-expanded="false" aria-controls="faq-a3" onclick="toggleFaq(this)">Does it need batteries?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="fq-a" id="faq-a3"><div class="faq-inner"><div class="faq-body">No. It's USB powered (DC 5V/1A) — plug it into any USB power source with the included cable. No batteries required or included.</div></div></div></div>
         <div class="fq"><button class="fq-q" aria-expanded="false" aria-controls="faq-a5" onclick="toggleFaq(this)">How do I contact you?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button><div class="fq-a" id="faq-a5"><div class="faq-inner"><div class="faq-body">Email: <a href="mailto:lumaworldshop@gmail.com" style="color:var(--pl)">lumaworldshop@gmail.com</a></div></div></div></div>
     </div></div></section>
 
     <div class="cs" id="cta" aria-labelledby="cta-title"><div class="cb">
         <h2 style="font-size:2rem;font-weight:700;margin-bottom:1rem" id="cta-title">Your Ceiling Is Waiting</h2>
-        <p style="color:var(--tm);margin-bottom:2rem;line-height:1.7">No cords. No setup. Your ceiling becomes a galaxy the moment you turn it on.</p>
+        <p style="color:var(--tm);margin-bottom:2rem;line-height:1.7">Plug in and point it — your ceiling becomes a galaxy the moment you turn it on.</p>
         <div class="pr" style="justify-content:center;margin-bottom:1.5rem"><span class="pn">$24.99</span><span class="pw" aria-label="Original price $34.99">$34.99</span></div>
         <button onclick="buyNow()" class="bp" style="font-size:1.1rem;padding:1rem 2.5rem;display:inline-flex;align-items:center;gap:.5rem" aria-label="Buy now for $24.99"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Get Yours</button>
     </div><div class="hn"><p><strong>Our promise:</strong> We never fabricate reviews, ratings, or sales numbers. Product photos are of the actual item. All specifications are from the manufacturer and reflect real capabilities.</p></div></div>
@@ -395,14 +402,6 @@
     (function(){ var p = new URLSearchParams(window.location.search), c = new URLSearchParams(); p.forEach(function(v,k){ if(/^[a-zA-Z0-9_-]+$/.test(k)&&!/[<>"'`]/.test(v)) c.set(k,v); }); if(c.toString()!==p.toString()) window.history.replaceState({},'','/'+(c.toString()?'?'+c.toString():'')); })();
     function announceChange(msg){ var e=document.getElementById('a11yAnnounce'); if(e){e.textContent='';setTimeout(function(){e.textContent=msg;},100);} }
 
-    /* iOS dvh fallback: set --vh so 100vh-reliant older browsers still size right */
-    (function(){
-        function setVH(){ document.documentElement.style.setProperty('--vh', (window.innerHeight*0.01)+'px'); }
-        setVH();
-        window.addEventListener('resize', setVH);
-        window.addEventListener('orientationchange', setVH);
-    })();
-
     var IS_MOBILE = window.matchMedia('(max-width: 600px)').matches || /Mobi|Android/i.test(navigator.userAgent);
     var IS_TOUCH = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
 
@@ -421,13 +420,11 @@
                 layer.appendChild(s);
             }
         }
-        // Fewer stars on mobile to reduce paint cost
         var f = IS_MOBILE ? 0.5 : 1;
         addStars(l1,Math.round(80*f),0.5,1,'');
         addStars(l2,Math.round(45*f),1,2,'');
         addStars(l3,Math.round(22*f),1.5,3,'box-shadow:0 0 4px rgba(167,139,250,0.4);');
         var mx=0,my=0,tx=0,ty=0;
-        // Skip mouse-driven parallax entirely on touch devices — nothing to react to
         if(!rm && !IS_TOUCH){
             document.addEventListener('mousemove',function(e){
                 tx=(e.clientX/window.innerWidth-0.5)*2;
@@ -445,19 +442,21 @@
 
     /* ================================================================
        PREMIUM GALAXY BACKGROUND
+       - Volumetric nebula clouds with filament structure
+       - Central galaxy core with luminosity bloom
+       - 4-layer parallax star field
+       - Aurora curtains with multi-frequency waves
+       - Shooting stars with physics
+       - Cosmic dust drift
        Volumetric nebula filaments + parallax starfield + shooting stars
-       Scales down complexity on mobile/low-power devices for smoothness.
        ================================================================ */
     (function(){
         var canvas = document.getElementById('bgCanvas');
         if (!canvas) return;
         var ctx = canvas.getContext('2d', { alpha: false });
         var w, h, time = 0;
-        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-        // Scale factor for particle counts / effects on mobile
+        var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)'.replace(' ','') || '(prefers-reduced-motion: reduce)').matches;
         var Q = IS_MOBILE ? 0.4 : 1;
-        // Cap devicePixelRatio on mobile to avoid rendering at 3x on huge canvases
         var DPR = IS_MOBILE ? Math.min(window.devicePixelRatio || 1, 1.5) : (window.devicePixelRatio || 1);
 
         // Data layers
@@ -485,6 +484,7 @@
             // === BACKGROUND STAR FIELD (tiny, dense, no glow) ===
             var bgCount = Math.floor(w * h / 4500 * Q);
             for (var i = 0; i < bgCount; i++) {
+                var t = Math.random();
                 bgStars.push({
                     x: Math.random() * w,
                     y: Math.random() * h,
@@ -492,19 +492,19 @@
                     alpha: 0.05 + Math.random() * 0.2,
                     twinkleSpeed: 0.001 + Math.random() * 0.003,
                     twinklePhase: Math.random() * Math.PI * 2,
-                    depth: 0.2 + Math.random() * 0.3
+                    depth: 0.2 + Math.random() * 0.3  // parallax factor
                 });
             }
 
-            // === MID DISTANCE STARS ===
-            var midCount = Math.floor(w * h / 12000 * Q);
+            // === MID DISTANCE STARS (some color tints, slight glow on brighter ones) ===
+            var midCount = Math.floor(w * h / 12000);
             for (var i = 0; i < midCount; i++) {
                 var t = Math.random();
                 var tint;
-                if (t < 0.15) tint = [255, 200, 150];
-                else if (t < 0.3) tint = [150, 180, 255];
-                else if (t < 0.4) tint = [255, 180, 220];
-                else if (t < 0.48) tint = [180, 255, 220];
+                if (t < 0.15) tint = [255, 200, 150];      // warm gold
+                else if (t < 0.3) tint = [150, 180, 255];  // cool blue
+                else if (t < 0.4) tint = [255, 180, 220];  // pink
+                else if (t < 0.48) tint = [180, 255, 220]; // mint
                 else tint = [255, 255, 255];
 
                 midStars.push({
@@ -516,19 +516,19 @@
                     twinklePhase: Math.random() * Math.PI * 2,
                     depth: 0.4 + Math.random() * 0.3,
                     tint: tint,
-                    hasGlow: !IS_MOBILE && Math.random() > 0.6
+                    hasGlow: Math.random() > 0.6
                 });
             }
 
             // === FOREGROUND BRIGHT STARS (glow halo + cross flare) ===
-            var fgCount = Math.max(IS_MOBILE ? 6 : 12, Math.floor(w * h / 50000 * Q));
+            var fgCount = Math.max(12, Math.floor(w * h / 50000));
             for (var i = 0; i < fgCount; i++) {
                 var t = Math.random();
                 var tint;
-                if (t < 0.2) tint = [255, 230, 180];
-                else if (t < 0.4) tint = [180, 200, 255];
-                else if (t < 0.6) tint = [255, 200, 230];
-                else if (t < 0.75) tint = [200, 255, 230];
+                if (t < 0.2) tint = [255, 230, 180];       // golden
+                else if (t < 0.4) tint = [180, 200, 255];  // ice blue
+                else if (t < 0.6) tint = [255, 200, 230];  // rose
+                else if (t < 0.75) tint = [200, 255, 230]; // aqua
                 else tint = [255, 255, 255];
 
                 fgStars.push({
@@ -545,7 +545,9 @@
             }
 
             // === NEBULAE (organic filament clouds) ===
-            var nebulaCount = IS_MOBILE ? (3 + Math.floor(Math.random() * 2)) : (7 + Math.floor(Math.random() * 3));
+            // Each nebula is a wandering path of overlapping soft ellipses
+            // that follow a curved spine — creates tendrils and veins, not circles
+            var nebulaCount = 7 + Math.floor(Math.random() * 3);
             for (var n = 0; n < nebulaCount; n++) {
                 var baseX = Math.random() * w;
                 var baseY = Math.random() * h * 0.75;
@@ -554,23 +556,30 @@
 
                 var colorIdx = n % 6;
                 var colors = [
-                    [139, 92, 246], [96, 165, 250], [45, 212, 191],
-                    [244, 114, 182], [251, 191, 36], [100, 140, 255]
+                    [139, 92, 246],   // purple
+                    [96, 165, 250],   // blue
+                    [45, 212, 191],   // teal
+                    [244, 114, 182],  // pink
+                    [251, 191, 36],   // gold
+                    [100, 140, 255]   // indigo
                 ];
                 var baseColor = colors[colorIdx];
 
                 var filaments = [];
-                var filCount = IS_MOBILE ? (6 + Math.floor(Math.random() * 6)) : (12 + Math.floor(Math.random() * 12));
+                var filCount = 12 + Math.floor(Math.random() * 12);
+                // Generate a curved spine path using accumulated angle
                 var spineAngle = baseAngle;
                 var spineX = baseX;
                 var spineY = baseY;
                 for (var f = 0; f < filCount; f++) {
                     var t = f / filCount;
+                    // Wander the spine slightly each step
                     spineAngle += (Math.random() - 0.5) * 0.4;
                     var stepSize = baseLen / filCount;
                     spineX += Math.cos(spineAngle) * stepSize;
                     spineY += Math.sin(spineAngle) * stepSize;
 
+                    // Filament size: fattest at center, tapering at ends
                     var taper = Math.sin(t * Math.PI);
                     var filWidth = (20 + Math.random() * 30) * taper;
 
@@ -596,8 +605,8 @@
                 });
             }
 
-            // === COSMIC DUST ===
-            var dustCount = Math.round((35 + Math.floor(Math.random() * 20)) * Q);
+            // === COSMIC DUST (tiny drifting motes — adds life) ===
+            var dustCount = 35 + Math.floor(Math.random() * 20);
             for (var i = 0; i < dustCount; i++) {
                 var t = Math.random();
                 dustMotes.push({
@@ -646,7 +655,7 @@
         }
 
         function draw(t){
-            // === BASE ===
+            // === BASE (deep space with subtle color zones) ===
             var grad = ctx.createRadialGradient(w * 0.3, h * 0.25, 0, w * 0.5, h * 0.5, Math.max(w, h) * 0.9);
             grad.addColorStop(0, '#04041a');
             grad.addColorStop(0.2, '#030316');
@@ -656,7 +665,7 @@
             ctx.fillStyle = grad;
             ctx.fillRect(0, 0, w, h);
 
-            // === GALAXY CORE GLOW ===
+            // === GALAXY CORE GLOW (subtle focal point) ===
             ctx.globalCompositeOperation = 'screen';
             var coreX = w * 0.3, coreY = h * 0.25;
             var corePulse = 0.7 + 0.3 * Math.sin(t * 0.08);
@@ -669,20 +678,19 @@
             ctx.fillStyle = coreGlow;
             ctx.fillRect(0, 0, w, h);
 
-            if (!IS_MOBILE) {
-                var core2X = w * 0.72, core2Y = h * 0.6;
-                var core2Pulse = 0.6 + 0.4 * Math.cos(t * 0.06 + 1.5);
-                var core2Glow = ctx.createRadialGradient(core2X, core2Y, 0, core2X, core2Y, Math.min(w, h) * 0.28);
-                core2Glow.addColorStop(0, 'rgba(244,114,182,' + (0.018 * core2Pulse).toFixed(3) + ')');
-                core2Glow.addColorStop(0.2, 'rgba(139,92,246,' + (0.012 * core2Pulse).toFixed(3) + ')');
-                core2Glow.addColorStop(0.5, 'rgba(96,165,250,' + (0.005 * core2Pulse).toFixed(3) + ')');
-                core2Glow.addColorStop(1, 'rgba(0,0,0,0)');
-                ctx.fillStyle = core2Glow;
-                ctx.fillRect(0, 0, w, h);
-            }
+            // Secondary core (different position, different rhythm)
+            var core2X = w * 0.72, core2Y = h * 0.6;
+            var core2Pulse = 0.6 + 0.4 * Math.cos(t * 0.06 + 1.5);
+            var core2Glow = ctx.createRadialGradient(core2X, core2Y, 0, core2X, core2Y, Math.min(w, h) * 0.28);
+            core2Glow.addColorStop(0, 'rgba(244,114,182,' + (0.018 * core2Pulse).toFixed(3) + ')');
+            core2Glow.addColorStop(0.2, 'rgba(139,92,246,' + (0.012 * core2Pulse).toFixed(3) + ')');
+            core2Glow.addColorStop(0.5, 'rgba(96,165,250,' + (0.005 * core2Pulse).toFixed(3) + ')');
+            core2Glow.addColorStop(1, 'rgba(0,0,0,0)');
+            ctx.fillStyle = core2Glow;
+            ctx.fillRect(0, 0, w, h);
             ctx.globalCompositeOperation = 'source-over';
 
-            // === NEBULAE ===
+            // === NEBULAE (behind stars) ===
             ctx.globalCompositeOperation = 'screen';
             for (var i = 0; i < nebulaBlobs.length; i++) {
                 drawNebula(nebulaBlobs[i], t);
@@ -691,12 +699,10 @@
 
             // === AURORA CURTAINS ===
             ctx.globalCompositeOperation = 'screen';
-            var auroraCount = IS_MOBILE ? 2 : 4;
-            var auroraStep = IS_MOBILE ? 12 : 6;
-            for (var i = 0; i < auroraCount; i++) {
+            for (var i = 0; i < 4; i++) {
                 ctx.beginPath();
                 ctx.moveTo(0, h * 0.05 + i * 80);
-                for (var x = 0; x <= w; x += auroraStep) {
+                for (var x = 0; x <= w; x += 6) {
                     var y = h * 0.05 + i * 80
                         + Math.sin(x * 0.0015 + t * 0.12 + i * 2.5) * 30
                         + Math.sin(x * 0.0035 + t * 0.06 + i) * 15
@@ -726,6 +732,7 @@
                 var a = s.alpha * (0.2 + 0.8 * Math.abs(Math.sin(t * s.twinkleSpeed + s.twinklePhase)));
                 var tint = s.tint;
 
+                // Subtle glow for brighter ones
                 if (s.hasGlow && a > 0.3) {
                     var glow = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, s.r * 4);
                     glow.addColorStop(0, 'rgba(' + tint[0]+','+tint[1]+','+tint[2]+',' + (a * 0.15).toFixed(3) + ')');
@@ -747,6 +754,7 @@
                 var a = s.alpha * (0.3 + 0.7 * Math.abs(Math.sin(t * s.twinkleSpeed + s.twinklePhase)));
                 var tint = s.tint;
 
+                // Large glow halo
                 var glowR = s.r * (5 + a * 8);
                 var glow = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, glowR);
                 glow.addColorStop(0, 'rgba(' + tint[0]+','+tint[1]+','+tint[2]+',' + (a * 0.3 * s.flareIntensity).toFixed(3) + ')');
@@ -755,12 +763,14 @@
                 ctx.fillStyle = glow;
                 ctx.beginPath(); ctx.arc(s.x, s.y, glowR, 0, Math.PI * 2); ctx.fill();
 
+                // Core
                 ctx.beginPath();
                 ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
                 ctx.fillStyle = 'rgba(' + tint[0]+','+tint[1]+','+tint[2]+',' + Math.min(a * 1.2, 1).toFixed(2) + ')';
                 ctx.fill();
 
-                if (!IS_MOBILE && a > 0.5 && s.flareIntensity > 0.4) {
+                // Cross flare
+                if (a > 0.5 && s.flareIntensity > 0.4) {
                     var fl = s.r * (8 + a * 10) * s.flareIntensity;
                     ctx.strokeStyle = 'rgba(' + tint[0]+','+tint[1]+','+tint[2]+',' + (a * 0.12 * s.flareIntensity).toFixed(3) + ')';
                     ctx.lineWidth = 0.4;
@@ -793,8 +803,7 @@
             }
 
             // === SHOOTING STARS ===
-            var shootChance = IS_MOBILE ? 0.002 : 0.004;
-            if (!reducedMotion && Math.random() < shootChance) {
+            if (!reducedMotion && Math.random() < 0.004) {
                 var angle = Math.PI * 0.1 + Math.random() * 0.35;
                 var speed = 5 + Math.random() * 10;
                 shootingStars.push({
@@ -823,6 +832,7 @@
                 ctx.beginPath(); ctx.moveTo(tailX, tailY); ctx.lineTo(ss.x, ss.y);
                 ctx.strokeStyle = g; ctx.lineWidth = 2; ctx.stroke();
 
+                // Head bloom
                 var headR = 5 + ss.alpha * 3;
                 var hg = ctx.createRadialGradient(ss.x, ss.y, 0, ss.x, ss.y, headR);
                 hg.addColorStop(0, 'rgba('+ss.color+','+(ss.alpha*0.8).toFixed(2)+')');
@@ -832,16 +842,9 @@
             }
         }
 
-        // Pause rendering when tab/page isn't visible (saves battery, avoids jank on resume)
         var visible = true;
         document.addEventListener('visibilitychange', function(){ visible = !document.hidden; if(visible && !reducedMotion) requestAnimationFrame(animate); });
-
-        function animate(){
-            if (!visible) return;
-            time += 0.016;
-            draw(time);
-            requestAnimationFrame(animate);
-        }
+        function animate(){ if(!visible) return; time += 0.016; draw(time); requestAnimationFrame(animate); }
         window.addEventListener('resize', resize); resize();
         if (reducedMotion) draw(0); else animate();
     })();
@@ -852,13 +855,12 @@
         if (!canvas) return;
         var ctx = canvas.getContext('2d');
         var burst = [], active = false;
-        var burstCount = IS_MOBILE ? 55 : 110;
         window.triggerStarBurst = function(){
             if (active) return; active = true;
-            var cx = window.innerWidth/2, cy = window.innerHeight/2;
+            var cx = canvas.width/2, cy = canvas.height/2;
             var colors = ['167,139,250','96,165,250','45,212,191','244,114,182','251,191,36'];
-            for (var i = 0; i < burstCount; i++) {
-                var angle = (Math.PI*2*i)/burstCount + Math.random()*0.4;
+            for (var i = 0; i < 110; i++) {
+                var angle = (Math.PI*2*i)/110 + Math.random()*0.4;
                 var speed = 2+Math.random()*10;
                 burst.push({x:cx,y:cy,vx:Math.cos(angle)*speed,vy:Math.sin(angle)*speed,alpha:1,decay:0.007+Math.random()*0.012,r:1+Math.random()*3,color:colors[Math.floor(Math.random()*colors.length)]});
             }
